@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Banner Section containing the site title */
+header {
+    background-color: rgb(204, 0, 0);
+    border: 1px solid black;
+}
+/* Banner Section styling effects */
+h1 {
+        text-align: center;
+}
+h1 a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 65px;
+    color: #FFFFFF;
+    font-family: 'Acme', sans-serif;
+    text-shadow: #000000;
+}
+
+h1 a:hover {text-decoration: none;}
+
+/* Navigation Styling */
+nav {
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    border-top: 8px double black; 
+    border-bottom: 3px solid grey;
+    padding: 2px 0px;
+    background-color: rgb(230, 230, 230);
+    overflow: none;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2px 0px;    
+}
+nav li { border-right: 1px solid #000000;border-left: 1px solid #000000;}
+nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0px;
+    padding: 0px 10px;
+}
+
+/*ACTIVE NAV LINKS*/
+.nav-active-home {border-bottom: 4px solid black;}
+.nav-active-reviews {border-bottom: 4px solid #3498db;}
+.nav-active-jobs   {border-bottom: 4px solid #f0776c;}
+.nav-active-tutorials {border-bottom: 4px solid #1abc9c;}
+.nav-active-glossary {border-bottom: 4px solid #ffd071;}    
+
+/*NAV HOVER FFECTS*/
+nav li:first-child a:hover{ border-bottom: 4px solid black; transition: 0.3s; }
+nav li:nth-child(2) a:hover{border-bottom: 4px solid #3498db; color: #3498db;transition: 0.3s;  }
+nav li:nth-child(3) a:hover{border-bottom: 4px solid #f0776c; color: #f0776c;transition: 0.3s; }
+nav li:nth-child(4) a:hover{border-bottom: 4px solid #1abc9c; color: #1abc9c; transition: 0.3s;}
+nav li:last-child a:hover{border-bottom: 4px solid #ffd071; color: #ffd071; transition: 0.3s;}
+
+/*FOOTER STYLING ALL PAGES*/
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    border-top: 8px double black;
+    background-color: rgb(204, 0, 0);
+    padding-bottom: 1.2em;
+}
+
+.icon-links {
+    display: flex;
+    padding: 0.5em;
+    margin: 0.5em 0.2em 0;
+    font-size: 2em;
+    justify-content: center;
+    list-style-type: none;
+}
+.icon-links li { width: 1.4em;}
+.icon-links { transition: all .2s ease-in-out; }
+.icon-links li:hover { transform: scale(1.5); cursor: pointer; }
+
+.footer{
+    display: flex;
+    list-style-type: none;
+    font-family: 'Acme', cursive;
+    color: white;
+    padding: 0.5em 0;
+    justify-content: center;
+}
+
+.footer li a {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    margin: 1em 0.5em;
+    justify-content: center;
+}
+
+/*############################################################*/
+/*INDEX.HTML STYLING*/
+/* below nav info*/
+.below-nav-info {
+    background-image: linear-gradient(#d3d3d3, white);
+}
+.below-nav-info p {
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    font-size: 22px;
+    margin: 0px 0px 2px 0px ;
+    padding: 0.5em 0 0.5em 0;
+}
+
+/* Main container presets */
+
+h1 h2 h3 h4 h5 h6 {font-family: 'Acme', sans-serif;}
+p {font-family: 'Acme', sans-serif;}
+
+/* Main container Featured Articles*/
+h2 {
+    margin: 0 0.5em;
+    border-bottom: 3px solid black;
+    font-family: 'Acme', sans-serif;
+    font-size: 50px;
+}
+
+/*PACIFIER ARTICLES SECTION STYLING*/
+
+.index-main-container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+section {
+    margin: 1em 1em;
+    padding: 3%;
+}
+
+/*INDEX SECTION ONE*/
+.index-section-one { border-bottom: 3px double black;
+    background-image: linear-gradient(skyblue, white);}
+/*all of the articles in section one*/    
+.articles {
+    margin: 1em 0em;
+    display: flex;
+    flex-flow: row wrap; 
+    flex: 1 1 auto;
+    justify-content: space-evenly;
+}
+/*individual articles in section one*/
+.index-article {
+    display: flex;
+    background-color: none;
+    border: 1px solid red;
+    flex-direction: row;
+    flex: 1 1 auto;
+    max-width: 800px;
+    justify-content: space-around;
+    margin: 0.4em;
+}
+
+.index-article .index-article-content {
+    display: flex;
+    padding: 2px;
+    flex: 0 1 auto;
+    border: 2px solid green;;
+    margin: 0.1em;
+    width: auto;
+    flex-flow: column wrap;
+
+}
+/*the read more button in the articles*/
+.article-read-more {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-decoration: none;
+    border: 5px solid black;
+    border-radius: 25px;
+    padding: 0.5em 1.5em;
+    margin: auto;
+    font-family: 'Acme' sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.article-read-more:hover{
+    font-weight: bolder;
+    background-color: black;
+    transition: ease 0.5s;
+    color: #FFFFFF;    
+}
+
+
+
+
+  
+
+.index-article img {width: 100%; height: auto;}
+
+
+
+/* INDEX.HTML SECTION TWO, 
+layout functions */
+.index-section-two {
+    border-bottom: 3px double black;
+}
+.section-two-articles {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 1.5em 2em;
+    justify-content: space-evenly;
+}
+.section-two-articles h3 {
+    font-size: 30px;
+}
+
+
+.section-two-articles article {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    flex: 1 1 auto;
+    margin: 1em 0.5em;
+    padding: 0.75em;
+    min-width: 400px;
+    max-width: 500px;
+    height: auto;
+    overflow: hidden;
+
+}
+
+/* Web PAcificer Sections styling effects for cards*/
+
+/* index.html, second contend area, Web Pacificer Sections styling effects*/
+.section-two-articles .main-article-reviews { box-shadow: 0 0 2em 0 #3498db; }
+.section-two-articles .main-article-jobs { box-shadow: 0 0 2em 0 #f0776c;}
+.section-two-articles .main-article-tutorials { box-shadow: 0 0 2em 0 #1abc9c; }
+.section-two-articles .main-article-glossary { box-shadow: 0 0 2em 0 #ffd071; }
+
+.section-two-articles .main-article-reviews:hover { box-shadow: 0 0 0.5em 0 #3498db; }
+.section-two-articles .main-article-jobs:hover { box-shadow: 0 0 0.5em 0 #f0776c;}
+.section-two-articles .main-article-tutorials:hover { box-shadow: 0 0 0.5em 0 #1abc9c; }
+.section-two-articles .main-article-glossary:hover { box-shadow: 0 0 0.5em 0 #ffd071;}
+
+.section-two-articles .main-article-reviews:hover {
+    background: #3498db;
+    transition: all 0.75s ease 0s;
+    box-shadow: 0 0 0.5em 0 #3498db;
+}
+.section-two-articles .main-article-jobs:hover {
+    background: #f0776c;
+    transition: all 0.75s ease 0s;
+    box-shadow: 0 0 0.5em 0 #f0776c;
+}
+.section-two-articles .main-article-tutorials:hover {
+    background: #1abc9c;
+    transition: all 0.75s ease 0s;
+    box-shadow: 0 0 0.5em 0 #1abc9c;
+}
+.section-two-articles .main-article-glossary:hover {
+    background: #ffd071;
+    transition: all 0.75s ease 0s;
+    box-shadow: 0 0 0.5em 0 #ffd071;
+}
+
+.section-two-articles .main-article-reviews:hover:after {
+    transition: all 0.3s ease 0;
+    border: 5em solid #3498db;
+}
+
+.section-two-articles p {
+    padding: 0.5em;
+}
+
+
+/* INDEX.HTML SECtION THREE, 
+Pacifier editor
+LAYOUT FUNCTIONS*/
+
+.index-section-three{
+    margin: 2em 0;
+}
+.section-three-articles {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 1em;
+}
+.index-article-s3 {
+    display: flex;
+    border: 1px solid red;
+    flex-direction: row wrap;
+    min-width: 760px;
+    max-width: 60%;
+}
+.index-aside {
+    border: 1px solid blueviolet;
+    width: 25%;
+
+}
+
+
+
+
+
+
+/*############################################################*/
+/*REVIEWS.HTML STYLING SECTION*/
+
+
+/*############################################################*/
+/*JOBS.HTML STYLING SECTION*/
+
+
+/*############################################################*/
+/*TUTORIALS.HTML STYLING SECTION*/
+
+.tutorials-section-one {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 2em;
+}
+.tutorials-section-one .tutorial-welcome {
+    display: flex;
+    font-size: 20px;
+    border-bottom: 3px solid #1abc9c;
+    background-color: #d3d3d3;
+    padding: 2px;
+    margin: 0 0 1em 0;
+    justify-content: center;
+}
+.tutorials-content-s1 {
+    margin: 1em;
+}
+.tutorials-section-one .tutorial-one {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+.tutorial-one figure {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: auto;
+    border: 3px solid #1abc9c;
+    margin: 1.5em 0;
+    padding: 1.5em;
+}
+
+
+
+
+
+
+/*############################################################*/
+/* GLOSSARY.HTML STYLING EFFECTS */
+
+
+.glossary-main-head h2 {
+    margin: 0 1em;
+    border-bottom: 3px solid black;
+    font-family: 'Acme', sans-serif;
+    font-size: 50px;
+}
+.glossary-main-head p {
+    margin: 0.5em 2em;
+    border-bottom: 3px solid black;
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+    display: flex;
+    font-size: 20px;
+    border-bottom: 3px solid #ffd071;
+    background-color: #d3d3d3;
+    padding: 2px;
+    justify-content: center;
+}
+.glossary-alphabet {
+    margin: 1em;
+    padding: 1em;
+    background-color: azure;
+    border: 1px #000000 solid;
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+    }
+
+.glossary-alphabet a {
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #f0776c;
+    height: 1em;
+    width: 1em;
+    margin: 0.1em;
+    padding: 0.2em;
+    border: 1px solid black;
+    text-align: center;
+    align-items: baseline;
+
+}
+
+.glossary-alphabet a:hover {
+    background-color: #ffd071;
+    border: 1px solid black;
+    transition: 0.25s;
+}
+
+.glossary-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   
+    grid-template-rows: repeat(52, 5vw);
+    grid-gap: 1px;
+}
+.glossary-a {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    border: 1px solid #000000;
+}
+
+
+
+
+
+
+
+
+/*############################################################*/
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    section {flex-direction: column;}
+    .articles { 
+      flex-direction: column; 
+      flex-flow: column wrap;
+      flex: 2 1 auto;
+      justify-content: stretch;
+    }
+    .index-article { flex-flow: column nowrap;}
+    .nav ul  {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav li {
+        display: flex;
+        
+        border-bottom: 1px solid black;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        height: 45px;
+        margin: 4px;
+    }
+    nav a:hover {border: none !important;}
+    nav li:first-child:hover{margin-bottom: 0px;border-bottom: 4px solid black; transition: 0.3s;}
+    nav li:nth-child(2):hover{margin-bottom: 0px;border-bottom: 4px solid #3498db; color: #3498db;transition: 0.3s;  }
+    nav li:nth-child(3):hover{margin-bottom: 0px;border-bottom: 4px solid #f0776c; color: #f0776c;transition: 0.3s; }
+    nav li:nth-child(4):hover{margin-bottom: 0px;border-bottom: 4px solid #1abc9c; color: #1abc9c; transition: 0.3s;}
+    nav li:last-child:hover{margin-bottom: 0px;border-bottom: 4px solid #ffd071; color: #ffd071; transition: 0.3s;}
+
+
+    .section-three-articles{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+    .index-article-s3 {
+        display: flex;
+        max-width: 650px;
+        flex-flow: column wrap;
+        margin: 4px 0;
+        
+    }
+    .index-article-s3 img {
+        width: auto;
+    }
