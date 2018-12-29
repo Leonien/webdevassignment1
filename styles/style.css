@@ -419,21 +419,94 @@ LAYOUT FUNCTIONS*/
 }
 
 .glossary-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);   
-    grid-template-rows: repeat(52, 5vw);
-    grid-gap: 1px;
+    display: flex;
+    flex-flow: column nowrap;
 }
-.glossary-a {
-    grid-column-start: 3;
-    grid-column-end: 5;
+.glossary-container div {padding: 1em 0; border-bottom: 1px double black;}
+
+.glossary-headings { 
+    display: flex; 
+    flex-flow: row; 
+    flex: auto; 
+    margin-bottom: 1em;
+    justify-content: center;
+}
+.glossary-headings h3 {display: flex;justify-content: center;}
+.glossary-headings h3:first-child {width:200px;border: 2.5px solid black; padding: 5px; background-color: #f0776c;}
+.glossary-headings h3:last-child {flex: auto;border: 2.5px solid black; padding: 5px; background-color: #ffd071;}
+
+#A, #B, #C, #D, #E, #F, #G, #H, #I, #J, #K, #L, #M,
+#N, #O, #P, #Q, #R, #S, #T, #U, #V, #W, #X, #Y, #Z { font-size: 30px; padding-left: 5%; margin: 10px;}
+
+.glossary-article {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 0 auto;
+    height: auto;
+}
+.glossary-article-item{
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+    flex: auto;
+    margin-bottom: 10px;
+}
+.glossary-article h3 { 
+    display: flex;
+    border: 2px solid black; 
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0776c;
+}
+.glossary-article p {
+    border: 2px solid black; 
+    border-radius: 5px;
+    padding: 10px;
+    flex: 1 1 auto;
+    width: 500px;
+    background-color: #ffd071;
+}
+
+
+
+
+/*
+.glossary-container {
+    display: grid;
+    width: 90%;
+    grid-template-columns: 25% 75%;   
+    grid-template-rows: 50px auto;
+    grid-gap: 15px;
+}
+.glossary-headings {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.glossary-b h3{
+    grid-column-start: 1;
+    grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 5;
     border: 1px solid #000000;
 }
+.glossary-b p {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
 
-
-
+.glossary-b {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+*/
 
 
 
