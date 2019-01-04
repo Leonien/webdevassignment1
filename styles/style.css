@@ -118,8 +118,8 @@ footer {
 
 /* Main container presets */
 
-h1 h2 h3 h4 h5 h6 {font-family: 'Acme', sans-serif;}
-p {font-family: 'Acme', sans-serif;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Acme', sans-serif;}
+p, li {font-family: 'Acme', sans-serif;}
 
 /* Main container Featured Articles*/
 h2 {
@@ -311,10 +311,120 @@ LAYOUT FUNCTIONS*/
 
 /*############################################################*/
 /*REVIEWS.HTML STYLING SECTION*/
+.reviews-main-head h2 {
+    margin: 0 1em;
+    border-bottom: 3px solid black;
+    font-family: 'Acme', sans-serif;
+    font-size: 50px;
+}
+.reviews-main-head p {
+    margin: 0.5em 2em;
+    border-bottom: 3px solid black;
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+    display: flex;
+    font-size: 20px;
+    border-bottom: 3px solid #3498db;
+    background-color: #d3d3d3;
+    padding: 2px;
+    justify-content: center;
+}
+
+
+.review-one {
+    padding: 1em;
+    margin: 2em;
+    border-top: 3px double black;
+    border-bottom: 3px double black;
+    background-image: linear-gradient(rgba(168, 225, 243, 0.664), white);
+}
+
+.review-one h3 {
+    font-size: 35px; 
+    text-align: center;       
+    padding: 5px 0;
+}
+
+.review-one h4 {font-size: 25px;    
+    padding: 2px 0;
+}
+.review-article-one {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.review-one-head{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+}
+.review-one-head figure img { 
+    justify-content: center;
+    align-self: center;    
+    flex: 0 1 300px;
+}
+.review-column {
+    display: flex;
+    flex-flow: row wrap;
+    width: 60%;
+    margin: 1em 0;
+    padding: 0.5em;
+    justify-content: center;
+    align-self: center;
+    border-bottom: 1px solid black;
+}
+.review-article-heading{
+    justify-content: center;
+    align-self: center;
+}
+.review-column p{
+    padding: 0.5em;    
+    border-left: 2px dotted black;
+}
+
+
+
+
 
 
 /*############################################################*/
 /*JOBS.HTML STYLING SECTION*/
+
+.jobs-main-head h2 {
+    margin: 0.5em 1em;
+    border-bottom: 3px solid black;
+    font-size: 50px;
+}
+.jobs-main-head p {
+    margin: 0.5em 2em;
+    border-bottom: 3px solid black;
+    font-size: 20px;
+    display: flex;
+    font-size: 20px;
+    border-bottom: 3px solid #f0776c;
+    background-color: #d3d3d3;
+    padding: 2px;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*############################################################*/
@@ -368,7 +478,7 @@ LAYOUT FUNCTIONS*/
 
 
 .glossary-main-head h2 {
-    margin: 0 1em;
+    margin: 0.5em 1em;
     border-bottom: 3px solid black;
     font-family: 'Acme', sans-serif;
     font-size: 50px;
@@ -386,14 +496,13 @@ LAYOUT FUNCTIONS*/
     justify-content: center;
 }
 .glossary-alphabet {
-    margin: 1em;
+    margin-bottom: 1em;
     padding: 1em;
     background-color: azure;
     border: 1px #000000 solid;
     font-family: 'Acme', sans-serif;
     font-size: 30px;
     display: flex;
-    flex-direction: row;
     flex-flow: row wrap;
     justify-content: center;
     }
@@ -421,8 +530,12 @@ LAYOUT FUNCTIONS*/
 .glossary-container {
     display: flex;
     flex-flow: column nowrap;
+    height: 100%;
 }
-.glossary-container div {padding: 1em 0; border-bottom: 1px double black;}
+.glossary-container div {
+    padding: 1em 0; 
+    border-bottom: 3px double black;
+}
 
 .glossary-headings { 
     display: flex; 
@@ -432,7 +545,7 @@ LAYOUT FUNCTIONS*/
     justify-content: center;
 }
 .glossary-headings h3 {display: flex;justify-content: center;}
-.glossary-headings h3:first-child {width:200px;border: 2.5px solid black; padding: 5px; background-color: #f0776c;}
+.glossary-headings h3:first-child {width:200px;border: 2.5px solid black; padding: 5px; background-color: #f0776c; margin-right: 5px;}
 .glossary-headings h3:last-child {flex: auto;border: 2.5px solid black; padding: 5px; background-color: #ffd071;}
 
 #A, #B, #C, #D, #E, #F, #G, #H, #I, #J, #K, #L, #M,
@@ -441,17 +554,16 @@ LAYOUT FUNCTIONS*/
 .glossary-article {
     display: flex;
     flex-flow: column wrap;
-    flex: 1 0 auto;
-    height: auto;
+    flex: auto;
 }
 .glossary-article-item{
     display: flex;
     flex-flow: row wrap;
-    height: auto;
+    height: max-content;
     flex: auto;
     margin-bottom: 10px;
 }
-.glossary-article h3 { 
+.glossary-article-item h3 { 
     display: flex;
     border: 2px solid black; 
     border-radius: 5px;
@@ -462,60 +574,24 @@ LAYOUT FUNCTIONS*/
     align-items: center;
     background-color: #f0776c;
 }
-.glossary-article p {
+.glossary-article-item p {
+    display: flex;
+    flex-flow: column;
     border: 2px solid black; 
     border-radius: 5px;
     padding: 10px;
-    flex: 1 1 auto;
+    flex: auto;
     width: 500px;
+    height: auto;
     background-color: #ffd071;
 }
-
-
-
-
-/*
-.glossary-container {
-    display: grid;
-    width: 90%;
-    grid-template-columns: 25% 75%;   
-    grid-template-rows: 50px auto;
-    grid-gap: 15px;
-}
-.glossary-headings {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-.glossary-b h3{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 5;
-    border: 1px solid #000000;
-}
-.glossary-b p {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
-.glossary-b {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 5;
-}
-*/
-
-
 
 
 
 /*############################################################*/
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     section {flex-direction: column;}
     .articles { 
       flex-direction: column; 
@@ -546,7 +622,15 @@ LAYOUT FUNCTIONS*/
     nav li:nth-child(3):hover{margin-bottom: 0px;border-bottom: 4px solid #f0776c; color: #f0776c;transition: 0.3s; }
     nav li:nth-child(4):hover{margin-bottom: 0px;border-bottom: 4px solid #1abc9c; color: #1abc9c; transition: 0.3s;}
     nav li:last-child:hover{margin-bottom: 0px;border-bottom: 4px solid #ffd071; color: #ffd071; transition: 0.3s;}
-
+    .footer {
+        width: 100%;
+        flex-flow: column nowrap;
+    }
+    .footer li { 
+        width: 100%;
+        flex: column wrap;
+        text-align: center;
+    }
 
     .section-three-articles{
         display: flex;
@@ -563,3 +647,61 @@ LAYOUT FUNCTIONS*/
     .index-article-s3 img {
         width: auto;
     }
+
+    .glossary-article {
+        height: auto;
+    }
+    .glossary-article-item p {width: auto; height: max-content;}
+
+
+    .review-column {
+        width:85%;
+    }
+    .review-one img {
+        flex: 0 1 auto;
+        max-width: 100%;
+    }
+
+    .tutorial-one figure {width: 100%;}
+    .tutorial-one .video {
+        flex: 0 1 auto;
+        max-width: 100%;
+    }
+    .tutorial-one .tut-video{
+        flex: 0 1 auto;
+        max-width: 100%;
+    }
+
+} /* CLOSING MEDIA QUERIES MEDIUM */
+
+/*OPENING MEDIA QUERY SMALL*/
+@media all and (max-width: 325px) {
+
+    .footer {
+        width: 100%;
+        flex-flow: column nowrap;
+    }
+    .footer li { 
+        width: 100%;
+        flex: column wrap;
+        text-align: center;
+    }
+
+    .glossary-headings h3 { 
+        display: flex;
+        max-width: 50%;
+        flex: auto;
+    }
+
+    .glossary-article {height: max-content;}
+    .glossary-article-item p {
+        width: auto;
+        height: max-content;
+    }
+
+
+    .review-column {
+        width:100%;
+    }
+
+} /* CLOSING MEDIA QUERIES SMALL */
