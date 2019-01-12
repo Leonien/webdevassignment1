@@ -47,6 +47,7 @@ nav a {
     color: black;
     margin: 0px;
     padding: 0px 10px;
+    font-weight: bold;
 }
 
 /*ACTIVE NAV LINKS*/
@@ -102,6 +103,22 @@ footer {
     justify-content: center;
 }
 
+
+/* Main container presets */
+h1, h2, h3, h4, h5, h6 {font-family: 'Acme', sans-serif;}
+p, li {font-family: 'Mandali', sans-serif;
+    letter-spacing: 0.7px;}
+
+/* Main container Featured Articles*/
+h2 {
+    margin: 0 0.5em;
+    border-bottom: 3px solid black;
+    font-family: 'Acme', sans-serif;
+    font-size: 50px;
+}
+
+/*############################################################*/
+/*############################################################*/
 /*############################################################*/
 /*INDEX.HTML STYLING*/
 /* below nav info*/
@@ -116,18 +133,7 @@ footer {
     padding: 0.5em 0 0.5em 0;
 }
 
-/* Main container presets */
 
-h1, h2, h3, h4, h5, h6 {font-family: 'Acme', sans-serif;}
-p, li {font-family: 'Acme', sans-serif;}
-
-/* Main container Featured Articles*/
-h2 {
-    margin: 0 0.5em;
-    border-bottom: 3px solid black;
-    font-family: 'Acme', sans-serif;
-    font-size: 50px;
-}
 
 /*PACIFIER ARTICLES SECTION STYLING*/
 
@@ -135,14 +141,18 @@ h2 {
     display: flex;
     flex-flow: column nowrap;
 }
-section {
-    margin: 1em 1em;
-    padding: 3%;
+.index-main-container h2 {
+    margin: 0.5em 1em;
+    padding: 10px;
 }
 
 /*INDEX SECTION ONE*/
 .index-section-one { border-bottom: 3px double black;
-    background-image: linear-gradient(skyblue, white);}
+    border-top: 3px double black;
+    border-bottom: 3px double black;
+    background-image: linear-gradient(rgba(168, 225, 243, 0.664), white);
+    margin: 0 15px;
+    padding: 0 5px;}
 /*all of the articles in section one*/    
 .articles {
     margin: 1em 0em;
@@ -157,11 +167,15 @@ section {
     background-color: none;
     border: 1px solid red;
     flex-direction: row;
-    flex: 1 1 auto;
+    flex: 2 1 auto;
     max-width: 800px;
     justify-content: space-around;
     margin: 0.4em;
 }
+.index-article img { 
+    justify-content: center;
+    align-self: center;    
+    flex: 0 1 400px;}
 
 .index-article .index-article-content {
     display: flex;
@@ -237,17 +251,13 @@ layout functions */
 /* Web PAcificer Sections styling effects for cards*/
 
 /* index.html, second contend area, Web Pacificer Sections styling effects*/
-.section-two-articles .main-article-reviews { box-shadow: 0 0 2em 0 #3498db; }
+.section-two-articles .main-article-reviews { box-shadow: 0 0 2em 0 #3498db; text-decoration: none; color: inherit;}
 .section-two-articles .main-article-jobs { box-shadow: 0 0 2em 0 #f0776c;}
 .section-two-articles .main-article-tutorials { box-shadow: 0 0 2em 0 #1abc9c; }
 .section-two-articles .main-article-glossary { box-shadow: 0 0 2em 0 #ffd071; }
 
-.section-two-articles .main-article-reviews:hover { box-shadow: 0 0 0.5em 0 #3498db; }
-.section-two-articles .main-article-jobs:hover { box-shadow: 0 0 0.5em 0 #f0776c;}
-.section-two-articles .main-article-tutorials:hover { box-shadow: 0 0 0.5em 0 #1abc9c; }
-.section-two-articles .main-article-glossary:hover { box-shadow: 0 0 0.5em 0 #ffd071;}
-
 .section-two-articles .main-article-reviews:hover {
+    text-decoration: none;
     background: #3498db;
     transition: all 0.75s ease 0s;
     box-shadow: 0 0 0.5em 0 #3498db;
@@ -272,6 +282,20 @@ layout functions */
     transition: all 0.3s ease 0;
     border: 5em solid #3498db;
 }
+
+.section-two-articles .main-article-reviews a
+{text-decoration: none;
+color: inherit;}
+.section-two-articles .main-article-jobs a
+{text-decoration: none;
+color: inherit;}
+.section-two-articles .main-article-tutorials a
+{text-decoration: none;
+color: inherit;}
+.section-two-articles .main-article-glossary a
+{text-decoration: none;
+color: inherit;}
+
 
 .section-two-articles p {
     padding: 0.5em;
@@ -307,33 +331,32 @@ LAYOUT FUNCTIONS*/
 
 
 
-
-
+/*############################################################*/
+/*############################################################*/
 /*############################################################*/
 /*REVIEWS.HTML STYLING SECTION*/
+
 .reviews-main-head h2 {
-    margin: 0 1em;
+    margin: 0.5em 1em 0 1em;
     border-bottom: 3px solid black;
-    font-family: 'Acme', sans-serif;
     font-size: 50px;
 }
 .reviews-main-head p {
-    margin: 0.5em 2em;
+    margin: 0 2.5em;
+    padding: 2px 0;
     border-bottom: 3px solid black;
-    font-family: 'Acme', sans-serif;
     font-size: 20px;
     display: flex;
     font-size: 20px;
     border-bottom: 3px solid #3498db;
     background-color: #d3d3d3;
-    padding: 2px;
     justify-content: center;
 }
 
 
 .review-one {
     padding: 1em;
-    margin: 2em;
+    margin: 3em;
     border-top: 3px double black;
     border-bottom: 3px double black;
     background-image: linear-gradient(rgba(168, 225, 243, 0.664), white);
@@ -392,24 +415,111 @@ LAYOUT FUNCTIONS*/
 
 
 /*############################################################*/
+/*############################################################*/
+/*############################################################*/
 /*JOBS.HTML STYLING SECTION*/
 
 .jobs-main-head h2 {
-    margin: 0.5em 1em;
+    margin: 0.5em 1em 0 1em;
     border-bottom: 3px solid black;
     font-size: 50px;
 }
 .jobs-main-head p {
-    margin: 0.5em 2em;
+    margin: 0 2.5em;
+    padding: 2px 0;
     border-bottom: 3px solid black;
     font-size: 20px;
     display: flex;
     font-size: 20px;
     border-bottom: 3px solid #f0776c;
     background-color: #d3d3d3;
-    padding: 2px;
     justify-content: center;
 }
+.jobs-section {display: flex; flex-flow: column nowrap;}
+
+.job-article-one h2 {
+    align-self: center;
+    flex-wrap: wrap;
+    text-align: center
+
+}
+
+.job-article-one figure {
+    align-self: center;
+    margin: 1.5em 0;
+    flex: 0 1 300px;
+}
+
+.job-article-one h3, .job-article-two h3 {
+    padding: 0.3em 0 0.3em 1em;
+    font-size: 30px;
+}
+
+.job-article-one{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 2em;
+}
+
+.job-article-one-card {
+    flex-flow: row wrap;
+    width: 65%;
+    flex: 0 1 300px;
+    align-self: center;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+}
+.job-article-one-card p {
+    padding: 1em 0.5em;
+    border-left: 2px dotted black;
+
+}
+.job-article-one ul{
+    padding: 0.2em 2em;
+    border-left: 2px dotted black;
+}
+.job-article-one li {
+    padding: 0.2em 0;
+}
+
+.job-article-two{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 2em;
+}
+
+.jobs-main blockquote {
+    border-top: 3px solid #f0776c;
+    border-bottom: 3px solid #f0776c;
+    width: 65%;
+    align-self: center;
+    text-align: center;
+    padding: 12px 2px;
+    font-size: 20px;
+}
+
+.job-article-two-card {
+    flex-flow: row wrap;
+    width: 65%;
+    flex: 0 1 300px;
+    align-self: center;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+}
+.job-article-two-card p {
+    padding: 1em 0.5em;
+    border-left: 2px dotted black;
+}
+.job-article-two ul{
+    padding: 0.2em 2em;
+    border-left: 2px dotted black;
+}
+.job-article-two li {
+    padding: 0.2em 0;
+}
+
+
+
 
 
 
@@ -428,31 +538,59 @@ LAYOUT FUNCTIONS*/
 
 
 /*############################################################*/
+/*############################################################*/
+/*############################################################*/
 /*TUTORIALS.HTML STYLING SECTION*/
+.tutorials-section-one section {
+    margin: 1em 1em;
+    padding: 3%;
+}
+.tutorials-main-head h2 {
+    margin: 0.5em 1em 0 1em;
+    border-bottom: 3px solid black;
+    font-size: 50px;
+}
+.tutorials-main-head p {
+    margin: 0 2.5em;
+    padding: 2px 0;
+    border-bottom: 3px solid black;
+    font-size: 20px;
+    display: flex;
+    font-size: 20px;
+    border-bottom: 3px solid #1abc9c;
+    background-color: #d3d3d3;
+    justify-content: center;
+    text-align: center;
+}
 
 .tutorials-section-one {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    margin: 2em;
 }
-.tutorials-section-one .tutorial-welcome {
-    display: flex;
-    font-size: 20px;
-    border-bottom: 3px solid #1abc9c;
-    background-color: #d3d3d3;
-    padding: 2px;
-    margin: 0 0 1em 0;
-    justify-content: center;
+
+.tutorial-one h3 {
+    padding: 0.3em 0 0.3em 1em;
+    font-size: 30px;
 }
+.tutorial-one p {
+    width: 90%;
+    padding: 0 0 0.5em 0;
+}
+
 .tutorials-content-s1 {
+    flex-flow: column wrap;
     margin: 1em;
+    width: 90%;;
+    align-self: center;
 }
 .tutorials-section-one .tutorial-one {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    align-self: center;
+    align-content: center;
     width: auto;
     height: auto;
 }
@@ -464,8 +602,8 @@ LAYOUT FUNCTIONS*/
     width: 650px;
     height: auto;
     border: 3px solid #1abc9c;
-    margin: 1.5em 0;
-    padding: 1.5em;
+    margin: 1em ;
+    padding: 1em;
 }
 
 
@@ -474,25 +612,28 @@ LAYOUT FUNCTIONS*/
 
 
 /*############################################################*/
+/*############################################################*/
+/*############################################################*/
 /* GLOSSARY.HTML STYLING EFFECTS */
-
+.glossary-main section{
+    margin: 1em 1em;
+    padding: 3%;
+}
 
 .glossary-main-head h2 {
-    margin: 0.5em 1em;
+    margin: 0.5em 1em 0 1em;
     border-bottom: 3px solid black;
-    font-family: 'Acme', sans-serif;
     font-size: 50px;
 }
 .glossary-main-head p {
-    margin: 0.5em 2em;
+    margin: 0 2.5em;
+    padding: 2px 0;
     border-bottom: 3px solid black;
-    font-family: 'Acme', sans-serif;
     font-size: 20px;
     display: flex;
     font-size: 20px;
     border-bottom: 3px solid #ffd071;
     background-color: #d3d3d3;
-    padding: 2px;
     justify-content: center;
 }
 .glossary-alphabet {
@@ -510,7 +651,7 @@ LAYOUT FUNCTIONS*/
 .glossary-alphabet a {
     text-decoration: none;
     color: whitesmoke;
-    background-color: #f0776c;
+    background-color: hsl(0, 100%, 55%);
     height: 1em;
     width: 1em;
     margin: 0.1em;
@@ -545,8 +686,9 @@ LAYOUT FUNCTIONS*/
     justify-content: center;
 }
 .glossary-headings h3 {display: flex;justify-content: center;}
-.glossary-headings h3:first-child {width:200px;border: 2.5px solid black; padding: 5px; background-color: #f0776c; margin-right: 5px;}
-.glossary-headings h3:last-child {flex: auto;border: 2.5px solid black; padding: 5px; background-color: #ffd071;}
+.glossary-headings h3:first-child {width:200px;border: 2.5px solid black; padding: 5px; color: white; background-color: hsl(0, 100%, 55%)
+    ; margin-right: 5px;}
+.glossary-headings h3:last-child {flex: auto;border: 2.5px solid black; padding: 5px; background-color: hsl(53, 100%, 47%);}
 
 #A, #B, #C, #D, #E, #F, #G, #H, #I, #J, #K, #L, #M,
 #N, #O, #P, #Q, #R, #S, #T, #U, #V, #W, #X, #Y, #Z { font-size: 30px; padding-left: 5%; margin: 10px;}
@@ -572,7 +714,8 @@ LAYOUT FUNCTIONS*/
     margin-bottom: 2px;
     justify-content: center;
     align-items: center;
-    background-color: #f0776c;
+    color: white;
+    background-color: hsl(0, 100%, 55%);
 }
 .glossary-article-item p {
     display: flex;
@@ -583,11 +726,13 @@ LAYOUT FUNCTIONS*/
     flex: auto;
     width: 500px;
     height: auto;
-    background-color: #ffd071;
+    background-color: hsl(53, 100%, 47%);
 }
 
 
 
+/*############################################################*/
+/*############################################################*/
 /*############################################################*/
 /* MEDIA QUERIES */
 
@@ -662,6 +807,48 @@ LAYOUT FUNCTIONS*/
         max-width: 100%;
     }
 
+
+
+    .job-article-one{
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 1em;
+    }
+    
+    .job-article-one-card {
+        flex-flow: row wrap;
+        width: 90%;
+        flex: 0 1 300px;
+        align-self: center;
+    }
+    .job-article-one-card p {
+        padding: 0.75em 0.25em;
+        border-left: 2px dotted black;
+    }
+
+    .job-article-two{
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 1em;
+    }
+    
+    .job-article-two-card {
+        flex-flow: row wrap;
+        width: 90%;
+        flex: 0 1 300px;
+        align-self: center;
+    }
+    .job-article-two-card p {
+        padding: 0.75em 0.25em;
+        border-left: 2px dotted black;
+    }
+
+
+
+
+
+
+
     .tutorial-one figure {width: 100%;}
     .tutorial-one .video {
         flex: 0 1 auto;
@@ -673,7 +860,9 @@ LAYOUT FUNCTIONS*/
     }
 
 } /* CLOSING MEDIA QUERIES MEDIUM */
-
+/*############################################################*/
+/*############################################################*/
+/*############################################################*/
 /*OPENING MEDIA QUERY SMALL*/
 @media all and (max-width: 325px) {
 
@@ -686,6 +875,10 @@ LAYOUT FUNCTIONS*/
         flex: column wrap;
         text-align: center;
     }
+
+
+
+
 
     .glossary-headings h3 { 
         display: flex;
@@ -705,3 +898,6 @@ LAYOUT FUNCTIONS*/
     }
 
 } /* CLOSING MEDIA QUERIES SMALL */
+/*############################################################*/
+/*############################################################*/
+/*############################################################*/
